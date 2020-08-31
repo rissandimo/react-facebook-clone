@@ -40,6 +40,7 @@
     padding: 0 30px;
 }
 
+
 /* Icon container */
 .header__option:hover{
     align-items: center;
@@ -54,9 +55,22 @@
     color: gray;
 }
 
+/* Hover over icon */
 .header__option > .MuiSvgIcon-root:hover{
     color: #2e81f4;
 }
+
+/* Active icon - make blue */
+.header__option--active > .MuiSvgIcon-root{
+    color: #2e81f4;
+}
+
+/* Active icon - give blue underline*/
+.header__option--active{
+    border-bottom: 2px solid blue;
+}
+
+
 
 /* Right */
 .header__right{
