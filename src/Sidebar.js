@@ -18,7 +18,7 @@ function Sidebar(){
             <SidebarRow src='https://avatars1.githubusercontent.com/u/5117934?s=460&u=b23a7d00e05bb10509a3ca7d8db9d3f1b6333e94&v=4' title='Omid Nassir'/>
             <SidebarRow 
               Icon={LocalHospitalIcon}
-               title='COVID-19 Information Centr' />
+               title='COVID-19 Information Center' />
             <SidebarRow Icon={EmojiFlagsIcon} title="Friends" />
             <SidebarRow Icon={ChatIcon} title="Messenger" />
             <SidebarRow Icon={StorefrontIcon} title="Marketplace" />
