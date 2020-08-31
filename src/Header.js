@@ -11,6 +11,14 @@ import SubscriptionsIcon from '@material-ui/icons/Subscriptions';
 import StorefrontIcon from '@material-ui/icons/Storefront';
 import SupervisedUserCircleIcon from '@material-ui/icons/SupervisedUserCircle';
 
+import { IconButton } from "@material-ui/core";
+import AddIcon from "@material-ui/icons/Add";
+import ForumIcon from '@material-ui/icons/Forum';
+import NotificationsActiveIcon from '@material-ui/icons/NotificationsActive';
+import ExpandMore from "@material-ui/icons/ExpandMore";
+
+ import AccountCircleIcon from '@material-ui/icons/AccountCircle';
+
 function Header(){
     return(
         <div className="header">
@@ -41,7 +49,25 @@ function Header(){
                 </div>
             </div>
 
-            <div className="header__right"></div>
+            <div className="header__right">
+                <div className="header__info">
+                    <AccountCircleIcon fontSize="large" style={{ color: 'grey'}}/>
+                    <h4>Omid Nassir</h4>
+                </div>
+
+                <IconButton>
+                    <AddIcon />
+                </IconButton>
+                <IconButton>
+                    <ForumIcon />
+                </IconButton>
+                <IconButton>
+                    <NotificationsActiveIcon />
+                </IconButton>
+                <IconButton>
+                    <ExpandMore />
+                </IconButton>
+            </div>
         </div>
     );
 }
