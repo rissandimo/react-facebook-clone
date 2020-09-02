@@ -1,7 +1,7 @@
 import React from 'react';
 import './App.css';
 
-// Componets
+// Components
 import Header from './Header';
 import Sidebar from './Sidebar';
 import Feed from './Feed';
