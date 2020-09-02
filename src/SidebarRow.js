@@ -1,5 +1,4 @@
 import React from 'react';
-import Sidebar from './Sidebar';
 
 import './SidebarRow.css';
 import { Avatar } from '@material-ui/core';
