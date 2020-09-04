@@ -8,9 +8,13 @@ import Feed from './Feed';
 import Login from './Login';
 import Widgets from './Widgets';
 
+import { useStateValue } from './StateProvider';
+
 function App() {
 
-  const user = null;
+  // runs after user logs in
+  // get user info
+  const [{ user }, dispatch] = useStateValue();
 
   return (
 
