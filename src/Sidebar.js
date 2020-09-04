@@ -2,6 +2,7 @@ import React from 'react';
 
 // Components
 import SidebarRow from './SidebarRow';
+import { useStateValue } from './StateProvider';
 
 // Materialize
 import LocalHospitalIcon from '@material-ui/icons/LocalHospital';
@@ -12,10 +13,13 @@ import VideoLibraryIcon from '@material-ui/icons/VideoLibrary';
 import ExpandMoreOutlinedIcon from '@material-ui/icons/ExpandMoreOutlined';
 
 import './Sidebar.css';
+
 function Sidebar(){
+
+    const [ {user }, dispatch] = useStateValue();
     return(
         <div className="sidebar">
-            <SidebarRow src='https://avatars1.githubusercontent.com/u/5117934?s=460&u=b23a7d00e05bb10509a3ca7d8db9d3f1b6333e94&v=4' title='Omid Nassir'/>
+            <SidebarRow src={user.photoURL} title={user.displayName}/>
             <SidebarRow 
               Icon={LocalHospitalIcon}
                title='COVID-19 Information Center' />

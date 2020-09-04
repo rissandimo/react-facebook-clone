@@ -1,5 +1,7 @@
 import React, { useState } from 'react';
 
+import { useStateValue } from './StateProvider';
+
 // Materialize
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
@@ -9,6 +11,8 @@ import './MessageSender.css';
 import { Avatar } from '@material-ui/core';
 
 function MessageSender(){
+
+    const [ { user }, dispatch] = useStateValue();
 
     const [input, setInput] = useState("");
     const [imageUrl, setImageUrl] = useState("");
@@ -26,12 +30,12 @@ function MessageSender(){
         <div className="messageSender">
         {/* Input fields */}
             <div className="messageCenter__top">
-                <Avatar />
+                <Avatar src={user.photoURL} />
                 <form>
                     <input
                     className="messageCenter__input"
                     onChange={e => setInput(e.target.value)}
-                    placeholder="What is on your mind?"
+                    placeholder={`What is on your mind ${user.displayName} ?`}
                     value={input}
                     />
                     <input
