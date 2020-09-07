@@ -1,13 +1,15 @@
 import React, { useState } from 'react';
-
 import { useStateValue } from './StateProvider';
+import './MessageSender.css';
+
+// Firebase
+import db from './firebase';
+import firebase from 'firebase';
 
 // Materialize
 import InsertEmoticonIcon from '@material-ui/icons/InsertEmoticon';
 import PhotoLibraryIcon from '@material-ui/icons/PhotoLibrary';
 import VideocamIcon from '@material-ui/icons/Videocam';
-
-import './MessageSender.css';
 import { Avatar } from '@material-ui/core';
 
 function MessageSender(){
@@ -19,6 +21,16 @@ function MessageSender(){
 
     const handleSubmit = e => {
         e.preventDefault();
+
+        // Add post to firebase
+        //serverTimeStamp - time is evaluted on server(automates process for conflicting timezones)
+        db.collection('posts').add({
+            message: input,
+            timestamp: firebase.firestore.FieldValue.serverTimestamp(),
+            profilePic: user.photoURL,
+            username: user.displayName,
+            image: imageUrl
+        })
 
         // Clear fields after submission
         setInput("");
