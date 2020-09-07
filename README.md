@@ -10,12 +10,12 @@ Then navigate to your project directory by running the command
 `cd react-facebook-clone`
   
 #### Install Depenencies
-Install the dependencies by running the command
+Install the dependencies by running the command  
 `npm install`
   
 #### Run Application
 
-To the the applcation in development mode, run the command
+To the the applcation in development mode, run the command  
 `npm run start`
 
 If the application doesn't start by default, you can view it in a browser by visiting [http://localhost:3000](http://localhost:3000)
