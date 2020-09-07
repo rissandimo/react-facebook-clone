@@ -18,7 +18,10 @@ function Feed(){
      onSnapshot() - once anything updated/modifid in collection -> changes push to app
     */
     useEffect( () => {
-        db.collection('posts').onSnapshot(snapshot => (
+        db.
+        collection('posts').
+        orderBy('timestamp', 'desc').
+        onSnapshot(snapshot => (
             setPosts(snapshot.docs.map(doc => 
                 ({id: doc.id, data: doc.data() }))))
             );
