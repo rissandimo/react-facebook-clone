@@ -14,11 +14,12 @@ function Login(){
     const [state, dispatch] = useStateValue();
 
     const signin = () => {
-        auth.signInWithPopup(provider)
+        auth
+        .signInWithPopup(provider)
         .then(result => {
 
-            dispatch({
-                type: actionTypes.SET_USER, // push into data layer
+            dispatch({  // push into data layer
+                type: actionTypes.SET_USER, 
                 user: result.user
             })
             console.log(result.user);

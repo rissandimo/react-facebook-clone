@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 
 // Material 
 import { Avatar } from '@material-ui/core';
@@ -20,7 +20,7 @@ function Posts({profilePic, image, username, timestamp, message}){
                 />
                 <div className="post__topInfo">
                     <h3>{username}</h3>
-                    <p>Timestamp</p>
+                    <p>{new Date(timestamp?.toDate()).toUTCString()}</p>
                 </div>
             </div>
 
