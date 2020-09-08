@@ -9,7 +9,7 @@ Clone the project into your machine by running the command
 Then navigate to your project directory by running the command  
 `cd react-facebook-clone`
   
-#### Install Depenencies
+#### Install Dependencies
 Install the dependencies by running the command  
 `npm install`
   
